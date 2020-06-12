@@ -66,6 +66,11 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node ./scripts/write-task-name-to-commit"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -135,5 +140,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "husky": "^4.2.5"
   }
 }
